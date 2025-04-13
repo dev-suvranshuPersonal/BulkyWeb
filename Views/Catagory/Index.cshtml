@@ -1,0 +1,46 @@
+﻿@model IEnumerable<BulkyWeb.Models.Catagory>
+
+<div class="Catagory">
+    <div class="row pt-4 pb-3">
+        <div class="col-6">
+            <h2 class="text-primary">
+                Catagory List
+            </h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="" asp-action="" class="btn btn-primary">
+                <i class="bi bi-arrow-left-circle"></i> Create New
+            </a>
+        </div>
+    </div>
+<thead>
+<table class="table table-bordered border-success table-striped">
+    <tr>
+            <th>
+                Id
+        <th>
+            CName
+        </th>
+        <th>
+            OrderId
+        </th>
+    </tr>
+</thead>
+<tbody>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>
+                @item.Id
+            </td>
+            <td>
+                @item.Name
+            </td>
+            <td>
+                @item.DisplayOrder
+            </td>
+        </tr>
+    }
+</tbody>
+</table>
+</div>
